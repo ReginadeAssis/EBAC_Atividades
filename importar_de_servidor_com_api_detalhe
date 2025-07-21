@@ -1,0 +1,70 @@
+import requests
+
+def enviar_arquivos(): criou uma função chamada enviar arquivo nela tem a variável com o caminho do arquivo q vc quer enviar. Qualquer arquivo do seu pc
+    caminho = 'C:\Users\Regina\OneDrive\Área de Trabalho\Nice c 200'
+
+ requisicao = requests.post(url:'https://www.file.io/', files={'file': open(caminho, 'rb')}) Na aula anterior usava o get p ele pegar hj vai usar o post p ele enviar
+ ele vai acessar a url file.io e vai mandar um tipo de arquivo. Assim o arquivo vai pegar o caminho rb de leitura(reader binari) que faz o arquivo ficar mais leve.
+
+ saida_requisicao = requisicao.json() P não ficar o arquivo binário na hora de vc ler transforma ele em json
+
+ print(saida_requisicao) Mostra a saida em json(formato trabalhado na análise de dados)
+
+ url = saida_requisicao['link'] Cria uma variável com o atributo desse arquivo json
+ print("Arquivo enviado", url)
+
+ #Nesse site file.io ele tem uma parte com vários métodos da api gratuita q vc pode usar
+
+ enviar_arquivo() testa a funcao
+
+
+ #Código correto que funciona e dá link no terminal:
+
+ import requests
+
+def enviar_arquivo():
+    local = 'C:/Users/Regina/Downloads/teste.xlsx'
+    requisicao = requests.post('https://upload.gofile.io/uploadFile', files={'file': open(local, 'rb')})
+    saida_requisicao = requisicao.json()
+    print(saida_requisicao)
+    url = saida_requisicao['data']['downloadPage']
+    print("Arquivo enviado", url)
+enviar_arquivo()
+
+#Agora o envio com senha
+Usa json pq é uma linguagem chave-valor, vc tem o atributo e o valor daquele atributo. Vc poderia pegar qualquer das informações
+que ele coloca como saída: createTime, guestToken...n só o link
+
+def receber_arquivo(file_url): Cria uma função
+    requisicao = requests.get(file_url) tem o post que envia, mas aqui vai usar a url a gente vai mandar um link para ele
+
+    if requisicao.ok: Aqui é para salvar o arquivo..poderia usar file.open,file.write e file.close o problema é q provavelmente vai dar bo
+        with open('arquivo baixado.xlsx', 'wb') as file: essa linha diz que com o arquivo aberto ele vai gerar um arquivo chamado file
+        o arquivo veio em excel xlsx mas poderia ser outro e wb é o tipo que agr é write binari e antes era read
+            file.write(requisicao.content) Aqui ele pega o conteúdo que é um atributo da variavel requisicao  que justamente pega o arquivo
+        print("Arquivo baixado") Automaticamente o arquivo fecha
+    else:
+        print("Erro ao baixar", requisicao.json()) Aqui c requisicao json vc mostra o erro que deu p vc poder arrumar
+
+receber_arquivo(coloca o link do arquivo q foi gerado primeiro) lembrando que isso só funciona uma vez. E lembrando tbm que ele vai salvar na pasta do projeto
+do phychram
+
+#Essa parte da chave de acesso é a api key geralmente fica c esse nome ela é criada dentro do site do file .io
+que foi atualizado e n tem mais isso
+
+def enviar_arquivo_chave():
+    caminho = 'C:/Users/Regina/Downloads/teste.xlsx'
+    chave_acesso = '123'
+
+    Pode escrever os atributos do arquivo q vai receber a requisicao assim ou em uma linha só como acima.
+    requisicao = requests.post(
+        url='https://file.io', lê url
+        files={'file': open(caminho, 'rb')}, lê o arquivo
+        headers={'Authorization': chave_acesso} lê o cabeçalho q a autorização dele vai ser a chave de acesso geralmente
+        o time de engenharia já vai dar o acesso que precisa. Dentro da reuisição vc acessa ele
+    )
+
+
+    saida_requisicao = requisicao.json()
+    print(saida_requisicao)
+

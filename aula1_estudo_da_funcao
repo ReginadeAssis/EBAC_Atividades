@@ -1,0 +1,7 @@
+import requests chama a biblioteca requests
+
+response(cria a variável para receber os dados que serão importados e trabalhados)=
+requests(pega a biblioteca).get(atributo da biblioteca)('https://finance.yahoo.com/quote/PETR4.SA/history/') O link fica sempre entre ' e ()
+
+
+print(exibe)(response.text[:9]) chama a variável pega dela o texto de 0 até 9 as vezes tem que limitar pq ela n consegue buscar
