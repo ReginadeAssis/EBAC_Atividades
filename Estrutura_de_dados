@@ -1,0 +1,5 @@
+import pandas as pd tem q baixar a biblioteca pandas
+
+lista_nomes = ['Ana', 'Marcos', 'Carlos'] cria uma lista de exemplo que pode conter qualquer arquivo
+print('Lista de Nomes: \n', lista_nomes) exibe td a lista apenas colocando o nome da variavel
+print('Primeiro nome: \n', lista_nomes[0]) como é lista ordenada vc pode exibir a posição que vc quer como índice
