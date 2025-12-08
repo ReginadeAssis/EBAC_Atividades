@@ -52,3 +52,47 @@ print('Qtd', (df['endereco_curto'] == 'Endereço Inválido').sum())
 df['cpf'] = df['cpf'].apply(lambda x: x if len(x) == 14 else 'cpf inválido') #x if tamanho de x for 14 do contrário cpf inválido
 print('Qtd', (df['cpf'] == 'cpf inválido').sum()) #P ver é o campo q eu quero c o valor q quero .sum p ele somar
 
+#p conferir os estados ele pegou a lista de estados brasileiros no google
+estados_br = ['AC','AP','AM','PA','RO','RR','TO','AL','BA','CE','MA','PB','PE','PI','RN','SE','DF','GO','MT','MS','ES','MG','RJ','SP','PR','RS','SC']
+df['estado_sigla']= df['estado_sigla'].str.upper().apply(lambda x: x if x in estados_br else 'desconhecido')
+#dps da arrumação vc joga isso p campo q já tinha nome
+print('Qtd', (df['estado_sigla'] == 'desconhecido').sum())
+
+#Dps de arrumar vc joga isso p os campos q já tinham nome
+df['cpf'] = df['cpf_mascara']
+df['idade']= df['idade_ajustada']
+df['endereco']= df['endereco_curto']
+df['estado']= df['estado_sigla']
+
+#Dps ele atualiza e salva os campos manualmente p garantir e salvar em um novo arquivo:
+df_salvar = df[['nome','cpf','idade','data','endereco','estado']]
+df_salvar.to_csv('clientes_tratados.csv', index=False)
+#p fechar pede p exibir
+print('novo data frame:\n', pd.read_csv('clientes_tratados.csv'))
+
+#Alguns conceitos importantes:
+#Zscore é uma medida estatística que indica quantos dp um valor está distante da média de um conjunto de dados
+# é comum seu uso para identificar outliers
+#Lambda é uma expressão anônima em phyton que permite a criação de pequenas funções descartáveis sendo ´til para operações simples e rápidas
+#IQR-interquartile range é uma medida estatística que representa a diferença entre o 1,3 quartil e o conjunto de dados, tbm usada p id aoutlier
+#Fillna- é uma função da biblioteca pandas que permite substituir valores nulos em um dataframe por um valor específico ajudando a lidar c dados ausentes
+#Dropna é uma função da biblioteca pandas usada p remover valores nulos d e u data frame. Pode ser usada p eliminar linhas e colunas inteiras q contém valores nulos
+#Dataframe é uma estrutura de dados bidimensional semelhante a uma tabela que é usada para armazenar e manipular dados em phyton
+#especialmente com a biblioteca pandas cada coluna de um dataframe pode conter diferentes tipos de dados
+
+#Para exploração inicial dos dados é essencial entender a estrutura dos dados por isso se usa funções como
+#head e tail para visualizar os primeiros e últimos registros identificando os padrões e inconnsistências
+
+#Verificação dos dados: verifique a quantidade de linhas e colunas tipos de dados e valores nulos do dataframe, isso ajuda a id problemas em potencial q precisam de correção
+#A biblioteca panas é uma ferramenta importante com phyton importar dados de arquivos csv para um dataframe panda facilita a analise e o tratamento de dados
+
+
+
+
+
+
+
+
+
+
+
