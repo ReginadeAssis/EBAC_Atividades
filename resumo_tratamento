@@ -1,0 +1,18 @@
+Estratégias comuns para tratar dados inconsistentes incluem a padronização de formatos, validação,
+correção de campos, ajuste de idade com base na data de nascimento, separação de endereços e cpf.
+Expressões lambda são funções anônimas que podem ser usadas para simplificar operações simples e customizar colunas
+A padronização de formatos e categorias nos dados é crucial para garantir q os dados são consistentes e comparáveis.
+Outliers são valores que se desviam significativamente dos outros dados em um conjunto e que podem ser identificados usando filtros básicos Zscore/IQR
+#Para identificar valores nulos: df.isna()
+#Para substituir: fillna, dropna ou thresh = n que permite definir um limite mínimo de valores para manter uma linha/ coluna.
+O tratamento de dados envolve a limpeza correção e padronização dos dados para remover erros e inconsistências é uma etapa essencial para garantir
+a qualidade e precisão das análises e modelos preditivos.
+ #exemplos de shape
+ linhas_colunas = df.shape
+ linhas, colunas = df.shape
+ print ('f' {linhas} e {colunas}')
+
+ #O split ('|') é o q mostra o q está dividindo o strip( ) é o q remove no caso em branco remove o espaço
+ Olhar pg 10 no caderno c desenho explicativo
+
+
