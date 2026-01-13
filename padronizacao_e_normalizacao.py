@@ -112,3 +112,10 @@ print('salario- Min:{:.4f} Max:{:.4f} Mean:{:.4f} std:{:.4f}'.format(
 	df['salario_RobustScaler'].std()
 ))
 
+#Normalização x Paronização
+#Duas técnicas c objetivo igual de redimesionar os dados, ele não troca os dados ele só muda a escala dos dados
+#Normalização desloca os valores p q fiquem entre 0 e 1 usando escala MinMax, coloca os dados nesse intervalo p poder comparar
+#Padronização vc tira da média e divide pelo dp ai a média fica 0 e o dp =1, vc deixa tds os dados dados na mesma escala c média 0 e dp de 1
+#o que não significa q vão estar no mesmo intervalo 0 e 1 por isso é outro método
+
+
