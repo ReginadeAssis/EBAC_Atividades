@@ -48,3 +48,73 @@ plt.show()
 #Como exemplo para a análise de vendas as empresas utilizam graficos de barra e de pizza para visualizar a performance de venda or produto região ou período e desenvolver estratégias
 #Também pode ser usado para a pesquisa de mercado com gráficos de dispersão e de correlação que são usados para analisar a relação entre diferentes variáveis como o preço e satisfação do cliente
 #gerando informações importantes para a equipe de marketing
+
+#agr ele dá mais exemplo com os dados no dicionário abaixo
+data = {
+	'idade':[23,45,56,25,34,42,67,29,38,50],
+	'salario':[50000,80000,120000,45000,60000,75000,130000,48000,70000,90000]
+}
+df=pd.DataFrame(data)
+
+#Gráfico de dispersão com Matplot
+plt.scatter(df['idade'],df['salario'],color='blue',alpha=0.5) #(campos, cor e transparecia)
+plt.title('Relação entre idade e salário')
+plt.xlabel('idade')
+plt.ylabel('salario')
+plt.show()
+
+#Gráfico de dispersão com seaborn
+sns.scatterplot(x='idade',y='salario',data=df,hue='idade', palette='viridis')#(campos, origem, agrupa por idade, cores)
+plt.title('Relação entre idade e salário')
+plt.xlabel('idade')
+plt.ylabel('salario')
+plt.show()
+
+#Aqui ele dá exemplo no matplot salvando dps
+data = [1,2,3,4,5]
+plt.figure(figsize=(10,5)) #ipca determinar o tamanho p salvar p n ficar distorcido
+plt.plot(data)
+plt.title('Exemplo de salvamento')
+plt.xlabel('eixo x')
+plt.ylabel('eixo y')
+plt.savefig('exemplo.png')
+plt.show()
+
+#pq os gráficos são importantes? para transformar dados complexos em visões simples e intuitivas facilitando a identificação de padrões e tendências.
+#como salvar um gráfico? plt.savefig(nome do arquivo)
+#graficos de densidade são usados para suavizar dados e visualizar a distribuição continua de uma variavel, em seaborn vc pode criar graficos de densidade
+#usando o metodo sns.kdeplot que permite ajustar a visualização
+#Os gráficos de barra e de pizza com o matplot vc pode usar plt.bar ou dataframe.plot.bar(). Já para os graficos de pizza usa o plt.pie configurando rótulos e ângulos
+#o q é pairplot e como ele é util? é uma visualização que combina vários gráficos como de dispersão e histograma para mostrar as relações entre multiplas variaveis numericas, vc cria
+#vc cria com sns.pairplot() no seaborn e ajuda id padroes, correlações e outliers.
+#Como cria grafico de dispersão com matplot e seaborn
+#matplot: plt.scatter() colocando o x e y
+#seaborn: sns.scatterplot() atribuindo os valores de x e y a variaveis anteriores
+
+#O matplot é uma biblioteca básica e versatil para criar graficos em phyton com grande nível de controle
+#O seaborn é uma biblioteca construída sobre o matplot e fornece uma interface de alto nivelpara criação de gráficos estatísticos mais atraentes e informativos
+#O histograma é um tipo de gráfico que representa a distribuição de uma variável contínua dividindo-a em intervalos(lins) e contando o numero de informações em kd intervalo
+#para criar um histograma vc usa plt.hist() fornecendo os dados e configurando os parametros
+#As principais bibliotecas para visualização de dados são:Pandas, matplotlib, seaborn e cyborg
+
+#quais dos gráficos é mais apropriado para avaliar a densidade de uma variável e identificar potenciais outliers? Densidade
+#Os gráficos de densidade são uma bversão suavizada do histograma proporcionando uma visão continua da distribuição
+#Sim, os graficos de densidade suavizam a distribuição o que pode ocultar picos acentuados que seriam vistos em um histograma
+#sim, os graficos de regressão são usados para visualizar relações e não são indicados pra previsão de tendências futuras, embra possam sugerir padrões históricos
+#Mapas de calor podem ser usados para visualizar a correlação de variáveis numéricas e categóricas (especialmente quando foi aplicada a codificação adequada)
+#Gráficos de densidade são mais apropriados para variáveis contínuas
+#mapas de calor são ideais para identificar correlções em um grande conjunto de dados
+#graficos de dispersão são úteis para identificar padrões e outliers em variaveis quantitativas
+#pairplot pode ficar confuso com mts variáveis causando confusão visual
+#gráficos de contagem são mais úteis para visualização de frequencias em variaveis categoricas.
+
+
+
+
+
+
+
+
+
+
+
