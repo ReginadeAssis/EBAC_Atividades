@@ -1,0 +1,103 @@
+#O stakeholder é a parte que pode ser impactada aquela que tem interesse na sua atividade e tem influência sobre ela.
+#O storytelling é a arte de contar a situação de uma forma envolvente e persuasiva para transmitir uma mensagem, compartilhar informações ou criar
+#conexões emocionais com o público, é uma ferramenta poderosa para motivar e influenciar as pessoas tornando mensagens complexas mais acessíveis e memoráveis
+#No que tange ao cientista de dados ele permite que as descobertas e insights derivadas de aalises complexas sejam mais facilmente acessadas.
+#Ao transformar dados em narrativas compreensíveis é possível garantir a valorização e a consideração dessas ideias em um momento de tomar decisões
+#Storytelling: trabalho de organizar trama reviravolta e final. Para construir essa narrativa vc usa perguntas:
+#Ambiente: Quando e onde? vendas no site no último ano
+#Desequilíbrio: pq é necessário, o q mudou? as vendas caíram drasticamente nos últimos 3m
+#Equilibrio: qual movimento deveria ter acontecido? As vendas deveriam ter se mantido pq n teve alteração do produto
+#Solução: como vc vai solucionar o problema? Um concorrente novo surgiu e tem vendido com desconto e vamos implementar isso tbm
+#A ideia é construir um início apresentar o tema que será abordado e ambientar seus ouvintes para o que será apresentado a seguir:
+#Meio- é a hora de demonstrar as informações importantes que vc analisou ou o projeto desenvolvido, é nessa etapa que ocorre o convencimento
+#Fim- uma vez convencido pela etapa anterior seu público está pronto para ser exposto aos resultados de sua analise e aberto as propostas
+
+#Stakeholders: são os indivíduos ou grupos que tem interesse ou são afetados pelos resultados de um projeto de ciencia de dados.
+#se comunicar de forma aberta com eles é fundamental para ser compreendido e informativa
+
+#Storytelling é a arte de usar narrativas para comunicar insights, envolve a criação de uma história com inicio meio e fim utilizando elementos com ográficos e visualizações para tornar
+#a msg clara e impactante
+
+#Equilíbrio é o q representa a solução do problema e o alcance do estado desejado após a aplicação das soluções baseadas em dados
+#Desequilibrio é um dos elementos-chave é o momento em que usamos os dados para mostrar o problema e promovendo engajamento e tensão
+#Observe a frase abaixo:
+Utilizaremos a regressão linear(tecnica p maior precisao) com regularização de 22 e um valor de lambda de 0,01 para evitar overfiting(erros)
+
+Se quisesse ver as vendas do mês é para usar gráficos de linha
+para construção de elementos gráficos é importante pensar primeiro no que vc quer mostrar e dps ir trabalahando o gráfco para dar mais enfase
+O gráfico de setores deve ser utilizado quando se tem no máximo 3 categorias sendo o ideal de 2. tbm é bom add uma média para exibir
+Tabelas são geralmente utilizadas para detalhar um maior volume de dados mas tome cuidado casas decimais
+
+Quando usar um dashboard?
+sempre que necessitarmos que o visual de dados seja atualizado com frequencia e facilmente consultado-pode ser usado p td time interno e gerencia
+
+Quando usar notebook pyton?
+sempre que for fazer uma analise pontual ou vai construir um modelo e precisa mostrar os dados com rapidez ou uma versão previa vc usa preferencialmente c membros do time e gestores
+
+PowerPoint é sado na entrega final do projeto ou analise importante q precisa de um story telling
+
+Principais tipos de gráficos
+Gráfico de colunas agrupadas são represetados por grupos distintos de colunas onde kd grupo corresponde a uma categoria diferente o q facilita a distinção entre categorias
+Dá destaque nas diferenças entre os grupos e possui as mesmas vantagens dos gráficos de colunas, mas permite a comparação com mais de uma categoria
+
+Gráfico de colunas é bom para identificar padroes e tendências além das diferenas entre os dados é ideal para dados categoricos e discretos por exemplo para monitorar a
+quantidade de vendas por região ou o número de alunos em diferentes classes permitindo uma comparação rápida em diferentes categorias-pode ficar vertical ou horizontal
+
+#Dados categoricos trazem categorias como regiões de venda que são distintas e nao podem ser quantificadas diretamente em termos numericos, kd região é uma categoria separada e diferente
+
+#Dados discretos são aqueles contáveis distintos e inteiros como o numero de alunos em diferentes classes e não tem fração de aluno
+
+Gráfico de colunas empilhadas kd coluna é dividida em segmentos q representam partes dos dados totais isso é útil para mostrar como kd cateoria contribui para o total e para
+comparar a distribuição de diferentes categorias dentro de kd grupo
+As colunas empilhadas são uteis para visualizar mudanças nas distribuições ao longo do tempo ou em diferentes grupos destacando tanto as diferenças absolutas quanto as relativas
+permite evidenciar n somente as diferenças, mas a composição das categorias em relação ao td
+
+Gráfico de linha são ideais para visualizar tendencias ao longo do tempo ou em uma variavel continua, eles são uteis para identificar padrões sazonais em séries temporais
+como flutuações que ocorrem em períodos específicos do ano. Ele permite comparar múltiplas series de dados em um unico grafico. Tbm pode destacar mudanças abruptas nos dados como
+picos ou quedas repentinas facilitando identificar evenos, ou tendencias
+
+Grafico de linhas e colunas permite apresentar duas series de dado de forma simultânea usando tanto linhas quanto colunas no mesmo gráfico
+Esses gráficos oferecem a vantagem de mostrar tendencias ao longo do tempo com linhas enquanto as colunas são usadas para destacar valores especificos ou comparação entre os grupos podendo ser usadas para comparar metricas
+relacionadas como receitas e despesas onde as linhas são receitas e as colunas despesas
+
+Gráfico de pizza(setores) kd setor representa uma parte proporcional do td sendo que o tamanho de kd setor é determinado pela proporção que ele representa em relação ao total
+não usar c mais de 3.
+
+Grafico de dispersao mostra a relação entre duas variaveis atraves da disposição dos pontos no plano cartesiano. kd ponto representa uma observação e suas coordenadas x e y ao
+valor de suas variaveis. Ele permite identificar padrões, tendencias e correlações entre as variaveis especialmene quando há relação linear e não linear entre as variaveis
+Os gráficos de dispersão são mt bons para identificar clusteres ou seja, grupos com comportamento semelhante
+
+O boxplot é composto por uma caxa retanglar onde o limite inferior representa o primeiro quartil q1, o limite superior o terceiro quartil (Q3) e a linha dentro da caixa
+a mediana (Q2). Os pontos fora do quadrante são considerados outliers e são plotados separadamente.Eles podem ser considerados indicativos de valores extremos ou erros.
+É comumente usado para comparar a distribuição de uma variável entre diferentes grupos permitindo identificar diferenças nas centralidades, dispersão e formas da distribuição
+
+Ele pode ser extendido para representar multiplas variáveis permitindo a comparação de distribuições entre grupos para várias variáveis simultaneamente.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
